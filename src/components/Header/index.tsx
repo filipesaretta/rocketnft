@@ -5,8 +5,10 @@ import metamaskLogo from '../../assets/logo_MetaMask.svg';
 const Menu = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-top: 5rem;
+  justify-content: space-between;
+  max-width: 1270px;
+  margin: 5rem auto 9rem auto ;
+  padding: 0 2rem;
 
   ul {
     display: flex;

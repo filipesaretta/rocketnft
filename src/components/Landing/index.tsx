@@ -15,7 +15,10 @@ const MainSection = styled.div`
   column-gap: 4rem;
   padding: 0 2rem;
 
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 400px 1fr;
+  }
   @media (min-width: 1120px) {
     grid-template-columns: 400px 2fr max-content;
   }
@@ -26,6 +29,14 @@ const MainSection = styled.div`
     margin-top: 0;
     padding: 0;
     position: relative;
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    @media (min-width: 768px) {
+      justify-self: end;
+      margin-top: 0;
+      grid-column: 2;
+    }
 
     span {
       color: var(--color-logo);
@@ -45,6 +56,19 @@ const MainSection = styled.div`
 `;
 
 const Details = styled.div`
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: center;
+  max-width: 460px;
+
+  @media (min-width: 768px) {
+    max-width: auto;
+    justify-self: end;
+    margin-top: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
   p {
     font-size: 1.8rem;
   }
@@ -69,7 +93,6 @@ const Badge = styled.img`
     justify-self: end;
     margin-top: 0;
     grid-column: 3;
-    /* grid-template-columns: 400px 2fr max-content; */
   }
 `;
 

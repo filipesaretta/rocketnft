@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import groupAvatars from '../../assets/group-avatars.png';
 import badge from '../../assets/badge.svg';
+import { Gallery } from '../Gallery';
 
 const Container = styled.div``;
 
@@ -60,6 +61,7 @@ const Details = styled.div`
   grid-row: 2;
   justify-self: center;
   max-width: 460px;
+  margin-top: 4rem;
 
   @media (min-width: 768px) {
     max-width: auto;
@@ -72,8 +74,9 @@ const Details = styled.div`
   p {
     font-size: 1.8rem;
   }
+
   div {
-    margin-top: 5.5rem;
+    margin-top: 3rem;
     display: flex;
     align-items: center;
 
@@ -88,7 +91,7 @@ const Details = styled.div`
 `;
 const Badge = styled.img`
   grid-column: 1 / -1;
-  margin-top: 2rem;
+  margin-top: 10rem;
   @media (min-width: 1120px) {
     justify-self: end;
     margin-top: 0;

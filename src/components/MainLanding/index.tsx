@@ -1,10 +1,16 @@
 import styled from 'styled-components';
-
+import { Gallery } from '../Gallery';
+import { Header } from '../Header';
+import imagePath from '../../assets/background.png';
 import groupAvatars from '../../assets/group-avatars.png';
 import badge from '../../assets/badge.svg';
-import { Gallery } from '../Gallery';
 
-const Container = styled.div``;
+const Container = styled.div`
+  background: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+`;
 
 const MainSection = styled.div`
   max-width: 1270px;
@@ -99,9 +105,10 @@ const Badge = styled.img`
   }
 `;
 
-export function Landing() {
+export function MainLanding() {
   return (
-    <Container>
+    <Container style={{ backgroundImage: `url(${imagePath})` }}>
+      <Header />
       <MainSection>
         <Details>
           <p>
@@ -126,6 +133,7 @@ export function Landing() {
         </h1>
         <Badge src={badge} />
       </MainSection>
+      <Gallery />
     </Container>
   );
 }

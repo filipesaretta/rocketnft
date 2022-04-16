@@ -85,7 +85,7 @@ export function Header() {
       <Logo>
         Rocket <span>NFT</span>
       </Logo>
-      <ul>
+      <ul id="top">
         <li>
           <a href="/"> Comprar NFT</a>
         </li>

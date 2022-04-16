@@ -104,7 +104,7 @@ export function BestArtists() {
         Melhores <span>artistas </span>
       </h3>
       {artists.map((artist) => (
-        <Card>
+        <Card key={artist.name}>
           <img src={artist.avatar} alt="" />
           <p> {artist.name}</p>
           <p>{artist.work}</p>

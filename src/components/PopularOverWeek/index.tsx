@@ -10,10 +10,16 @@ const Container = styled.div`
   max-width: 1270px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: 1fr;
   justify-content: space-between;
   padding: 0 2rem;
   padding-bottom: 5rem;
+  justify-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, max-content);
+  }
+
   h3 {
     grid-column: 1 / -1;
     font-size: 4rem;
